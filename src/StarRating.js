@@ -7,10 +7,10 @@ import Star from "./Star";
 //   3) When the user clicks the number of stars, the color changes back to the original color, and user moving would not have no effect -- consider it done
 //   4) If the user moves away and moves back in, now the user should be able to alter the rating again
 
-export default function StarRating({ numStars = 5, ...props }) {
-  console.log(`numStars ${numStars} and the props ${props}`, props);
+export default function StarRating({ numTotalStars = 5, initialRating = 0 }) {
+  console.log(`numTotalStars ${numTotalStars}`);
 
-  const [numSelectedStars, setNumSelectedStars] = useState(3);
+  const [numSelectedStars, setNumSelectedStars] = useState(initialRating);
   const [numHoveringStars, setNumHoveringStars] = useState(null);
 
   const [isUserHovering, setIsUserHovering] = useState(false);
@@ -23,7 +23,7 @@ export default function StarRating({ numStars = 5, ...props }) {
   return (
     <div class="star-rating">
       <div onMouseEnter={() => setIsUserHovering(true)} onMouseLeave={() => setIsUserHovering(false)} >
-        {Array.from({ length: numStars }).map((e, i) =>
+        {Array.from({ length: numTotalStars }).map((e, i) =>
           <Star
             key={i}
             color={getColor(isUserHovering, i, numSelectedStars, numHoveringStars)}

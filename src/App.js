@@ -6,13 +6,12 @@ import { useState, useEffect } from "react";
 
 // Demo 1: https://codesandbox.io/s/affectionate-brook-64gxw
 
-
 import './App.css';
 
 function App() {
   return (
     <div id="app">
-      <StarRating numStars="10" />
+      <StarRating numTotalStars="10" initialRating="3" />
     </div>
   );
 }
