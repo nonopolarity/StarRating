@@ -14,31 +14,24 @@ export default function StarRating({ numStars = 5, ...props }) {
   const [numHoveringStars, setNumHoveringStars] = useState(null);
 
   const [isUserHovering, setIsUserHovering] = useState(false);
-  const [isDone, setIsDone] = useState(false);
 
   function getColor(isUserHovering, i, numSelectedStars, numHoveringStars) {
-    let color;
-    if (isUserHovering) {
-      color = i < numHoveringStars ? "#73c2fb" : "grey"   // #73c2fb Maya blue
-    } else {
-      color = i < numSelectedStars ? "red" : "grey"
-    }
-    return color;
+    const threshold = isUserHovering ? numHoveringStars : numSelectedStars;
+    return (i < threshold) ? "red" : "grey"
   }
 
   return (
-    <div>
-      <div onMouseEnter={() => setIsUserHovering(true)} onMouseLeave={() => { setIsUserHovering(false); setIsDone(false); }} >
+    <div class="star-rating">
+      <div onMouseEnter={() => setIsUserHovering(true)} onMouseLeave={() => setIsUserHovering(false)} >
         {Array.from({ length: numStars }).map((e, i) =>
           <Star
             key={i}
-            isUserHovering={isUserHovering}
             color={getColor(isUserHovering, i, numSelectedStars, numHoveringStars)}
-            handleSelect={() => { if (!isDone) { setNumSelectedStars(i + 1); setIsUserHovering(false); setIsDone(true); } }}
-            handleHover={() => { if (!isDone) { setNumHoveringStars(i + 1) } }}
+            handleSelect={() => setNumSelectedStars(i + 1)}
+            handleHover={() => setNumHoveringStars(i + 1)}
           />)}
       </div>
-      <div>rating {numSelectedStars}</div>
+      <div class="label">rating {numSelectedStars}</div>
     </div>
   );
 }

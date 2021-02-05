@@ -12,4 +12,7 @@ code {
     monospace;
 }
 
-.star-rating-star { transition: color 0.06s }
+.star-rating-star { transition: color 0.03s }
+
+.star-rating { display: inline-block }
+.star-rating .label { text-align: center }
