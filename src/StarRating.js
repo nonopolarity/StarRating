@@ -1,6 +1,12 @@
 import { useState } from "react";
 import Star from "./Star";
 
+// Requirements:
+//   1) The initial stars should be displayed
+//   2) When the user enters the area, a light blue color shows how many stars, and follows the user's mouse movement
+//   3) When the user clicks the number of stars, the color changes back to the original color, and user moving would not have no effect -- consider it done
+//   4) If the user moves away and moves back in, now the user should be able to alter the rating again
+
 export default function StarRating({ numStars = 5, ...props }) {
   console.log(`numStars ${numStars} and the props ${props}`, props);
 
@@ -33,7 +39,7 @@ export default function StarRating({ numStars = 5, ...props }) {
             handleHover={() => { if (!isDone) { setNumHoveringStars(i + 1) } }}
           />)}
       </div>
-      <p>rating {numSelectedStars}</p>
+      <div>rating {numSelectedStars}</div>
     </div>
   );
 
