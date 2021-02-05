@@ -1,6 +1,6 @@
 import StarRating from "./StarRating";
 
-// Demo 1: https://codesandbox.io/s/epic-edison-6kf9i
+// Demo 1: https://codesandbox.io/s/laughing-wescoff-mtf9j
 // Demo 2: a different behavior
 //           https://codesandbox.io/s/affectionate-brook-64gxw
 
