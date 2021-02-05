@@ -7,7 +7,7 @@ export default function StarRating({ numStars = 5, ...props }) {
   const [numSelectedStars, setNumSelectedStars] = useState(3);
 
   return (
-    <onMouseEnter={() => {}}>
+    <>
       {Array.from({ length: numStars }).map((e, i) =>
       <Star
         key={i}
