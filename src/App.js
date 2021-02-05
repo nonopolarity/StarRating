@@ -8,12 +8,11 @@ import { useState, useEffect } from "react";
 import './App.css';
 
 function App() {
- 
-  return (
 
-      <div>
-        <StarRating numStars="10" />
-      </div>
+  return (
+    <div>
+      <StarRating numStars="10" />
+    </div>
   );
 
 }
