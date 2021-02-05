@@ -4,7 +4,7 @@ import Star from "./Star";
 // Requirements:
 //   1) The initial stars should be displayed
 //   2) When the user enters the area, the same red color shows how many stars, and follows the user's mouse movement
-//   3) When the user clicks on the star, the rating becomes this new rating
+//   3) When the user clicks on a star, the rating becomes this new rating
 //   4) If the user moves away and moves back in, now the user should be able to alter the rating again
 
 export default function StarRating({ numTotalStars = 5, initialRating = 0 }) {
