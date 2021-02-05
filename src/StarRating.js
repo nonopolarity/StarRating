@@ -29,7 +29,7 @@ export default function StarRating({ numTotalStars = 5, initialRating = 0 }) {
             handleHover={() => setNumHoveringStars(i + 1)}
           />)}
       </div>
-      <div class="label">rating {numSelectedStars}</div>
+      <div className="label">rating {numSelectedStars}</div>
     </div>
   );
 }
