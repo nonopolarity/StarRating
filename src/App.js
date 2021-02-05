@@ -9,12 +9,10 @@ import { useState, useEffect } from "react";
 
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div id="app">
       <StarRating numTotalStars="10" initialRating="3" />
     </div>
   );
 }
-
-export default App;

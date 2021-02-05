@@ -3,13 +3,11 @@ import Star from "./Star";
 
 // Requirements:
 //   1) The initial stars should be displayed
-//   2) When the user enters the area, a light blue color shows how many stars, and follows the user's mouse movement
-//   3) When the user clicks the number of stars, the color changes back to the original color, and user moving would not have no effect -- consider it done
+//   2) When the user enters the area, the same red color shows how many stars, and follows the user's mouse movement
+//   3) When the user clicks the number of stars, the number of stars and rating becomes this new rating
 //   4) If the user moves away and moves back in, now the user should be able to alter the rating again
 
 export default function StarRating({ numTotalStars = 5, initialRating = 0 }) {
-  console.log(`numTotalStars ${numTotalStars}`);
-
   const [numSelectedStars, setNumSelectedStars] = useState(initialRating);
   const [numHoveringStars, setNumHoveringStars] = useState(null);
 

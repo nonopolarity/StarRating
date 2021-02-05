@@ -10,8 +10,6 @@ export default function Star({ color = "grey", handleSelect = () => { }, handleH
       onClick={handleSelect}
     />
   );
-
 }
 
 export { Star };
-// export default Star;
