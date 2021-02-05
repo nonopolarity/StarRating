@@ -27,7 +27,6 @@ export default function StarRating({ numStars = 5, ...props }) {
   }
 
   return (
-
     <div>
       <div onMouseEnter={() => setIsUserHovering(true)} onMouseLeave={() => { setIsUserHovering(false); setIsDone(false); }} >
         {Array.from({ length: numStars }).map((e, i) =>
@@ -42,8 +41,6 @@ export default function StarRating({ numStars = 5, ...props }) {
       <div>rating {numSelectedStars}</div>
     </div>
   );
-
 }
 
 export { StarRating };
-// export default Star;
